@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Local inference may download model assets, but SDK diagnostics must not
+         contact third-party logging services. Approved reviews use our own API. -->
+    <meta http-equiv="Content-Security-Policy" content="connect-src 'self' https://storage.googleapis.com https://cdn.jsdelivr.net" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VANTYR</title>
+    <meta name="description" content="VANTYR: evidence-first safety intelligence for physical spaces." />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="VANTYR" />
+    <meta property="og:description" content="VANTYR: evidence-first safety intelligence for physical spaces." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="VANTYR" />
+    <meta name="twitter:description" content="VANTYR: evidence-first safety intelligence for physical spaces." />
+    <link rel="icon" type="image/svg+xml" href="%BASE_URL%safesight-icon.svg" />
+    <link rel="apple-touch-icon" href="%BASE_URL%safesight-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

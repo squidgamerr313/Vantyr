@@ -1,0 +1,16 @@
+WEBVTT
+
+00:00.000 --> 00:04.000
+Simulation only. A scripted person box enters Bench A, with a four-second dwell rule.
+
+00:04.000 --> 00:09.000
+Sustained entry creates a review flag. This is not live camera evidence or a danger verdict.
+
+00:09.000 --> 00:18.000
+Read the simulated zone observation. Position is measured in the image, not real-world depth.
+
+00:18.000 --> 00:24.000
+In Events, open the zone observation and record a human outcome separately.
+
+00:24.000 --> 00:32.000
+Mark reviewed. Resolution requires a separate human confirmation; leaving the zone never resolves a flag.

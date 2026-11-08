@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Schematic workshop backdrop for the VANTYR simulation. Line drawing only; people, boxes and zones are drawn by the app.">
+  <!-- Simulation geometry is 1536x864 scaled by 0.8333. Floor sits below the simulated feet (~y 533-608).
+       Ladder sketch aligns with the simulated ladder box (x 317-467, y 317-683). No people, boxes or zones are baked in. -->
+  <defs>
+    <pattern id="g" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0H0V64" fill="none" stroke="#d9d4c8" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ece7dc"/>
+      <stop offset="1" stop-color="#e3ddd0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#wall)"/>
+  <rect y="560" width="1280" height="160" fill="#ddd6c7"/>
+  <rect y="560" width="1280" height="160" fill="url(#g)" opacity=".7"/>
+  <path d="M0 560H1280" stroke="#b9b09e" stroke-width="2"/>
+  <g fill="none" stroke="#8f8676" stroke-width="2.5" stroke-linejoin="round">
+    <!-- wall shelving, left -->
+    <path d="M40 150H250M40 250H250M40 350H250M52 130V560M238 130V560"/>
+    <rect x="62" y="196" width="60" height="54"/><rect x="134" y="214" width="84" height="36"/>
+    <rect x="70" y="300" width="98" height="50"/><rect x="180" y="316" width="40" height="34"/>
+    <!-- ladder sketch -->
+    <path d="M340 330L318 680M446 330L468 680M335 380H451M329 450H457M323 520H463M318 590H468"/>
+    <!-- workbench (right, under the configured demo zone area) -->
+    <path d="M720 470H1100M738 470V600M1082 470V600M760 540H1060"/>
+    <rect x="770" y="430" width="90" height="40"/><rect x="930" y="446" width="62" height="24"/>
+    <!-- window -->
+    <rect x="560" y="90" width="300" height="170" rx="4"/>
+    <path d="M710 90V260M560 175H860"/>
+    <!-- pegboard -->
+    <rect x="940" y="110" width="260" height="190" rx="4"/>
+  </g>
+  <g fill="#8f8676">
+    <circle cx="980" cy="150" r="3"/><circle cx="1020" cy="150" r="3"/><circle cx="1060" cy="150" r="3"/><circle cx="1100" cy="150" r="3"/><circle cx="1140" cy="150" r="3"/>
+    <circle cx="980" cy="200" r="3"/><circle cx="1020" cy="200" r="3"/><circle cx="1060" cy="200" r="3"/><circle cx="1100" cy="200" r="3"/><circle cx="1140" cy="200" r="3"/>
+    <circle cx="980" cy="250" r="3"/><circle cx="1020" cy="250" r="3"/><circle cx="1060" cy="250" r="3"/><circle cx="1100" cy="250" r="3"/><circle cx="1140" cy="250" r="3"/>
+  </g>
+  <text x="32" y="700" font-family="monospace" font-size="16" fill="#7a7262" letter-spacing="2">SCHEMATIC BACKDROP / SIMULATION ONLY</text>
+</svg>

@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "VANTYR"
+description = "Real-time browser-based safety intelligence with local object and pose detection, an interactive monitoring dashboard, and on-demand Gemini scene reasoning."
+version = "1.0.0"
+id = "artifacts/safesight"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23777
+
+[services.development]
+run = "pnpm --filter @workspace/safesight run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/safesight", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/safesight/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23777"
+BASE_PATH = "/"

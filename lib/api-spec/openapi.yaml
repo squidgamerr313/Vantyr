@@ -1,0 +1,273 @@
+openapi: 3.1.0
+info:
+  # Do not change the title, if the title changes, the import paths will be broken
+  title: Api
+  version: 0.1.0
+  description: API specification
+servers:
+  - url: /api
+    description: Base API path
+tags:
+  - name: health
+    description: Health operations
+paths:
+  /hero-recording/{asset}:
+    get:
+      operationId: getHeroRecordingAsset
+      summary: Public recorded engine demonstration assets
+      parameters:
+        - name: asset
+          in: path
+          required: true
+          schema:
+            type: string
+            enum: [engine.mp4, poster.jpg]
+        - name: Range
+          in: header
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Complete public media asset
+          content:
+            video/mp4:
+              schema: { type: string, format: binary }
+            image/jpeg:
+              schema: { type: string, format: binary }
+        "206":
+          description: Requested byte range
+          content:
+            application/octet-stream:
+              schema: { type: string, format: binary }
+        "404":
+          description: Unknown asset
+        "416":
+          description: Unsatisfiable byte range
+        "503":
+          description: Recording temporarily unavailable
+  /speech/review:
+    post:
+      operationId: reviewSpeech
+      summary: Retired cloud speech endpoint; use on-device speech processing
+      deprecated: true
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SpeechInput"
+      responses:
+        "410":
+          description: Cloud speech is disabled. No audio is forwarded to an AI provider.
+        "200":
+          description: Historical response schema retained for compatibility; not emitted by the retired endpoint
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SpeechReview"
+        "400":
+          description: Invalid or unsupported bounded WAV audio
+        "403":
+          description: Cross-site request rejected
+        "413":
+          description: Input too large
+        "429":
+          description: Capacity or rate limit
+        "503":
+          description: Review unavailable
+  /setup/chat:
+    post:
+      operationId: askSetupAssistant
+      summary: Ask the docs-grounded assistant for guidance and optional local preference proposals
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SetupInput"
+      responses:
+        "200":
+          description: Guidance with validated documentation sources and an optional proposal
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SetupAnswer"
+        "400":
+          description: Invalid message or settings
+        "403":
+          description: Cross-site request rejected
+        "429":
+          description: Request limit reached
+        "503":
+          description: Assistant unavailable
+  /safety/analyze:
+    post:
+      operationId: analyzeScene
+      summary: Analyze a user-approved camera snapshot
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SceneInput"
+      responses:
+        "200":
+          description: Contextual assessment
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SceneAssessment"
+        "400":
+          description: Invalid snapshot
+        "429":
+          description: Please wait before analyzing again
+        "503":
+          description: Analysis temporarily unavailable
+  /healthz:
+    get:
+      operationId: healthCheck
+      tags: [health]
+      summary: Health check
+      description: Returns server health status
+      responses:
+        "200":
+          description: Healthy
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthStatus"
+components:
+  schemas:
+    SpeechCategory:
+      type: string
+      enum: [profanity, possible_abuse, possible_threat, help_request]
+    SpeechInput:
+      type: object
+      additionalProperties: false
+      required: [audio, mimeType, categories, consent]
+      properties:
+        audio: { type: string, minLength: 100, maxLength: 342000 }
+        mimeType: { type: string, enum: [audio/wav] }
+        consent: { type: boolean, enum: [true] }
+        categories:
+          type: array
+          minItems: 1
+          maxItems: 4
+          uniqueItems: true
+          items:
+            $ref: "#/components/schemas/SpeechCategory"
+    SpeechCue:
+      type: object
+      additionalProperties: false
+      required: [category, excerpt, explanation]
+      properties:
+        category:
+          $ref: "#/components/schemas/SpeechCategory"
+        excerpt: { type: string, minLength: 1, maxLength: 300 }
+        explanation: { type: string, minLength: 1, maxLength: 500 }
+    SpeechReview:
+      type: object
+      additionalProperties: false
+      required: [status, transcript, cues, limitations]
+      properties:
+        status:
+          type: string
+          enum: [reviewed, silence, unintelligible, unsupported_language, uncertain]
+        transcript: { type: string, maxLength: 1600 }
+        cues:
+          type: array
+          maxItems: 4
+          items:
+            $ref: "#/components/schemas/SpeechCue"
+        limitations: { type: string, minLength: 1, maxLength: 600 }
+    SetupPatch:
+      type: object
+      additionalProperties: false
+      properties:
+        facingMode: { type: string, enum: [user, environment] }
+        minConfidence: { type: number, minimum: 0.2, maximum: 0.95 }
+        intervalMs: { type: integer, minimum: 40, maximum: 1000 }
+        showBoxes: { type: boolean }
+        showPose: { type: boolean }
+        audioAlerts: { type: boolean }
+        logThreshold: { type: string, enum: [low, moderate, high] }
+        logCooldownSec: { type: integer, minimum: 1, maximum: 60 }
+    SetupMessage:
+      type: object
+      additionalProperties: false
+      required: [role, content]
+      properties:
+        role: { type: string, enum: [user, assistant] }
+        content: { type: string, minLength: 1, maxLength: 2000 }
+    SetupInput:
+      type: object
+      additionalProperties: false
+      required: [messages, settings]
+      properties:
+        messages:
+          type: array
+          minItems: 1
+          maxItems: 12
+          items:
+            $ref: "#/components/schemas/SetupMessage"
+        settings:
+          $ref: "#/components/schemas/SetupPatch"
+    SetupProposal:
+      type: object
+      additionalProperties: false
+      required: [reason, changes]
+      properties:
+        reason: { type: string, minLength: 1, maxLength: 1500 }
+        changes:
+          $ref: "#/components/schemas/SetupPatch"
+    SetupAnswer:
+      type: object
+      additionalProperties: false
+      required: [answer, sources]
+      properties:
+        answer: { type: string, minLength: 1, maxLength: 6000 }
+        sources:
+          type: array
+          minItems: 1
+          maxItems: 5
+          items: { type: string }
+        proposal:
+          $ref: "#/components/schemas/SetupProposal"
+    SceneInput:
+      type: object
+      required: [image]
+      properties:
+        image:
+          type: string
+          maxLength: 6000000
+          description: JPEG data URL approved by the user for transmission
+        context:
+          type: string
+          maxLength: 1000
+    SceneAssessment:
+      type: object
+      required: [summary, risk, evidence, recommendations, limitations]
+      properties:
+        summary:
+          type: string
+        risk:
+          type: string
+          enum: [low, moderate, high, uncertain]
+        evidence:
+          type: array
+          items:
+            type: string
+        recommendations:
+          type: array
+          items:
+            type: string
+        limitations:
+          type: string
+    HealthStatus:
+      type: object
+      properties:
+        status:
+          type: string
+      required:
+        - status
+

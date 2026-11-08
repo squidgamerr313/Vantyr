@@ -1,0 +1,1624 @@
+{
+  "scope": "Current working source snapshot only; no Git history, production data or environment secrets accessed.",
+  "excluded_categories": [
+    "Git history",
+    "agent memory and skills",
+    "conversation history",
+    "uploaded files",
+    "recordings and raster marketing media",
+    "generated outputs",
+    "research datasets and reports",
+    "downloaded weights",
+    "dependencies",
+    "environment files"
+  ],
+  "excluded_selected_files": [
+    "artifacts/safesight/public/demo-scene.jpg",
+    "artifacts/safesight/public/walkthrough/poster.jpg",
+    "artifacts/safesight/public/walkthrough/simulation-review.mp4"
+  ],
+  "export_only_changes": [
+    "localhost launcher",
+    "media fallback components with original source retained",
+    "root package license UNLICENSED pending owner decision",
+    "README and rights notes",
+    "stronger ignore file"
+  ],
+  "redactions": [
+    {
+      "file": "artifacts/safesight/scripts/calibration-prior-browser.ts",
+      "kind": "workspace path or domain",
+      "count": 1
+    },
+    {
+      "file": "artifacts/safesight/scripts/tool-detail-browser.ts",
+      "kind": "workspace path or domain",
+      "count": 2
+    }
+  ],
+  "secret_pattern_scan": {
+    "findings": 0,
+    "categories": [
+      "private-key",
+      "google-api-key",
+      "github-token",
+      "openai-key",
+      "slack-token",
+      "aws-key",
+      "credential-url",
+      "jwt",
+      "literal-secret"
+    ],
+    "reviewed_exceptions": [
+      "Exact https://user:pass@example.org/ negative webhook-validation fixture in responses.test.mjs; reserved example.org domain, not a real credential."
+    ],
+    "limitations": "Pattern-based check, not a guarantee of no sensitive material or a legal/license review. Binary icons are not text-scanned."
+  },
+  "files": [
+    {
+      "file": ".env.example",
+      "bytes": 248,
+      "sha256": "1f39f00d45abef17bf9abf27e34b8524e3603093656dd6febc48ff3ca3efd10b"
+    },
+    {
+      "file": ".gitignore",
+      "bytes": 253,
+      "sha256": "f9f4dbc70a376151b9c3a41eb9655928484d9ea7efdc39c80560231f4c3ac2dc"
+    },
+    {
+      "file": ".npmrc",
+      "bytes": 56,
+      "sha256": "1ded4f26f4851b35dae702edd5719d1be5ff31db6983858d088d5e6593ea7c99"
+    },
+    {
+      "file": "README.md",
+      "bytes": 4706,
+      "sha256": "12f7152624bbb00fb5bf0b2668bfb1f925345913edbbf36032435f1afe9e4cee"
+    },
+    {
+      "file": "RIGHTS-AND-THIRD-PARTY.md",
+      "bytes": 1818,
+      "sha256": "4eabfdbaaa98ec3c2ac36ba967757a444e9488021e3b900d35697c9c59e84c35"
+    },
+    {
+      "file": "artifacts/api-server/.replit-artifact/artifact.toml",
+      "bytes": 784,
+      "sha256": "e461708bfe50f6eb964fa755cf0c6ba813c19392be055d5ef96c729aa0173539"
+    },
+    {
+      "file": "artifacts/api-server/build.mjs",
+      "bytes": 3455,
+      "sha256": "a268757bc319f2ccaf2f2661d6616ea9cab3c8d8bc45b46b0ebfdb2bc6180267"
+    },
+    {
+      "file": "artifacts/api-server/package.json",
+      "bytes": 1056,
+      "sha256": "1a9f1f4f502e25c9c2e326f29f19a6d4d4d0a7f89b51b256149dfb892f0a01b7"
+    },
+    {
+      "file": "artifacts/api-server/scripts/publish-hero-media.mjs",
+      "bytes": 1149,
+      "sha256": "426e742e0412ba9765ef40381affd992f4a740646cc669280237c3de591ee3f3"
+    },
+    {
+      "file": "artifacts/api-server/src/app.ts",
+      "bytes": 875,
+      "sha256": "dde251fce122e3baca76d598fcb13a99ac47e08ac4b510a5cff3841c40dd7ff7"
+    },
+    {
+      "file": "artifacts/api-server/src/index.ts",
+      "bytes": 511,
+      "sha256": "9c1f296e0008006b40d766ee436697e43ef99cf907f2c7afe9a6cd2d6c118d3c"
+    },
+    {
+      "file": "artifacts/api-server/src/lib/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "artifacts/api-server/src/lib/gemini.ts",
+      "bytes": 477,
+      "sha256": "63afb3ad4110eff37a028aaa364144af91b47aed7eff6f1be41ef3dccf5a4efc"
+    },
+    {
+      "file": "artifacts/api-server/src/lib/hero-storage.ts",
+      "bytes": 986,
+      "sha256": "f56d2c4ea64007ca668c3a9eed254edd2b513c3892430758eafddb795b19bd0b"
+    },
+    {
+      "file": "artifacts/api-server/src/lib/logger.ts",
+      "bytes": 421,
+      "sha256": "29e1ca75036fe917595a3a74fd450857d845836fe0625c30b9caa02df4acba62"
+    },
+    {
+      "file": "artifacts/api-server/src/lib/setup-assistant.ts",
+      "bytes": 3403,
+      "sha256": "78c067e735821b9d375787ab4f8b982b20e0ba23b867145c4a03fa139fd8df5a"
+    },
+    {
+      "file": "artifacts/api-server/src/lib/speech-review.ts",
+      "bytes": 4339,
+      "sha256": "36978346958cfaf53a7be9e09d4f7e890b24ac9ff654f563fe46a098da4caebb"
+    },
+    {
+      "file": "artifacts/api-server/src/middlewares/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "artifacts/api-server/src/middlewares/input-errors.ts",
+      "bytes": 684,
+      "sha256": "11f40661552ef0caf0d5199cd8cc79a6898aa3793a4f80a3cef15b1e352ba1b3"
+    },
+    {
+      "file": "artifacts/api-server/src/routes/health.ts",
+      "bytes": 288,
+      "sha256": "0386ceddb4ff4bff220af72ca38a62191ad95a2f41fd619df3bb9ceffce03db2"
+    },
+    {
+      "file": "artifacts/api-server/src/routes/hero-media.ts",
+      "bytes": 2400,
+      "sha256": "ac125714dd66dbc055c9a49ef134f71c94e116630c3e96aaa2ea8b270703b158"
+    },
+    {
+      "file": "artifacts/api-server/src/routes/index.ts",
+      "bytes": 717,
+      "sha256": "99b76a17b974d6e2456d4c82c5ba64c499e5ca357f16f1abfaa32dc9ed3c55a6"
+    },
+    {
+      "file": "artifacts/api-server/src/routes/safety.ts",
+      "bytes": 4018,
+      "sha256": "e88b5ab43363933219c0b9fbe57aec9e58c9866bb00e45750023809ada004c25"
+    },
+    {
+      "file": "artifacts/api-server/src/routes/setup.ts",
+      "bytes": 3453,
+      "sha256": "50230d667fbfc8dccd06e93ed6055c7bd6a7ce3e66bb79dcfdce47b330ac4c6f"
+    },
+    {
+      "file": "artifacts/api-server/src/routes/speech.ts",
+      "bytes": 3841,
+      "sha256": "5c8bdf49c7c0aecc99ef7bfefee241603b04ba43d79a2f23f58b0085592def91"
+    },
+    {
+      "file": "artifacts/api-server/tests/all.test.ts",
+      "bytes": 71,
+      "sha256": "bd966feacc2b835488821d831705afc622007a2809ff51c27be8825a8db4538e"
+    },
+    {
+      "file": "artifacts/api-server/tests/run.mjs",
+      "bytes": 634,
+      "sha256": "f56df665a7555a48cb287b806dee53f3090f23374e94fb7f20daa5c03118e721"
+    },
+    {
+      "file": "artifacts/api-server/tests/safety.test.ts",
+      "bytes": 6028,
+      "sha256": "6a1efbb6baa6e1fc364c9f5f4afa903b9d9fa8c63ede6a7ac2b410c9efd7e4cd"
+    },
+    {
+      "file": "artifacts/api-server/tests/setup.test.ts",
+      "bytes": 4946,
+      "sha256": "7540a81f7067a7ae8f277b8e5c7bb511dcbe10904a503251c4a9d1134f8ed88b"
+    },
+    {
+      "file": "artifacts/api-server/tests/speech.test.ts",
+      "bytes": 5865,
+      "sha256": "3f1c5e2a96835c69e765ab0f64c47e05fbceb6022f86fc47b1b49f039e779f72"
+    },
+    {
+      "file": "artifacts/api-server/tsconfig.json",
+      "bytes": 335,
+      "sha256": "aa300909ccd1d4282761b5d6549a174717b663bb56cb0f59d107d4b3d96cb009"
+    },
+    {
+      "file": "artifacts/safesight/.replit-artifact/artifact.toml",
+      "bytes": 687,
+      "sha256": "0d08a1874cdfff00cff1d0ad1997d05298e0a2b91e77bd72f5e4d1d6f740e933"
+    },
+    {
+      "file": "artifacts/safesight/components.json",
+      "bytes": 434,
+      "sha256": "3a5d5af62f05e6e3de6c5085f31ed4f49273d57cfeae4d69d00a2568c91f54f9"
+    },
+    {
+      "file": "artifacts/safesight/index.html",
+      "bytes": 1717,
+      "sha256": "73950e0475ce838e42c1c57a46949c95075747ce6d975d48923b0e81a5003471"
+    },
+    {
+      "file": "artifacts/safesight/package.json",
+      "bytes": 3597,
+      "sha256": "508560cc358d61a68d17baeab7101121e9ac188342d8f9a54149c47f07040d7a"
+    },
+    {
+      "file": "artifacts/safesight/playwright.config.mjs",
+      "bytes": 436,
+      "sha256": "230e9f800136206f5bb83fb55393d40f4bae28134cac87627f8c4b85ad60ed69"
+    },
+    {
+      "file": "artifacts/safesight/public/demo-scene.svg",
+      "bytes": 2706,
+      "sha256": "f02d2a56deaa654a8d2da76c762c302c8039a20715fc8c286f5538b1c3fb219e"
+    },
+    {
+      "file": "artifacts/safesight/public/robots.txt",
+      "bytes": 23,
+      "sha256": "16ceb5ee3e0dc13aa9adf31a3ebbe45a1d965b8c2b9f72eaf84e5911e140ed95"
+    },
+    {
+      "file": "artifacts/safesight/public/safesight-icon-ink.svg",
+      "bytes": 981,
+      "sha256": "dfebfe52cfa2607ae0ecfa810add8ec8a417522d7ff0638fcddf0409b5d535ad"
+    },
+    {
+      "file": "artifacts/safesight/public/safesight-icon.png",
+      "bytes": 13187,
+      "sha256": "22dae7449370c7d54f66b678d6495c77971e2ef174790c4cd0bf48ee9883e3bb"
+    },
+    {
+      "file": "artifacts/safesight/public/safesight-icon.svg",
+      "bytes": 1014,
+      "sha256": "81038c2f7fd1659a1100bec07d66187a9dfb4adcf17028b2f592b9cf1abe200e"
+    },
+    {
+      "file": "artifacts/safesight/public/walkthrough/captions.vtt",
+      "bytes": 587,
+      "sha256": "7a91989fe51c9a3e0e36641bcbcee666711c9fea20341d82f55a5e37e63a2ec5"
+    },
+    {
+      "file": "artifacts/safesight/scripts/audit-contrast.mjs",
+      "bytes": 5486,
+      "sha256": "a844c91734fe71795ba30264860c30539606ae4f3ede9c3101f1813c29e5889b"
+    },
+    {
+      "file": "artifacts/safesight/scripts/benchmark-pipeline.mjs",
+      "bytes": 12576,
+      "sha256": "f93a8c9385ca5b05cda8a75dbcd968d15f303a4e3e4bb6410dba20b336cbe91f"
+    },
+    {
+      "file": "artifacts/safesight/scripts/calibration-prior-browser.ts",
+      "bytes": 2296,
+      "sha256": "54b8ae433887f8c3e5762ae1a8dce6e9f1747949574f2b362888b77e1aabffa7"
+    },
+    {
+      "file": "artifacts/safesight/scripts/capture-devpost.mjs",
+      "bytes": 3703,
+      "sha256": "d062ef7ca09fa9a884aca7850e326a99c67019d5d116d8519946167b50e26caf"
+    },
+    {
+      "file": "artifacts/safesight/scripts/capture-engine-hero.mjs",
+      "bytes": 7856,
+      "sha256": "e92450ce863a8985151d50fbf2272b8e6bf5d16a91ff321681b01cc312a51f7f"
+    },
+    {
+      "file": "artifacts/safesight/scripts/capture-walkthrough.mjs",
+      "bytes": 4616,
+      "sha256": "615b9a59ce851af4e5008d649c90a21cf19c340a6ff321cd0d32ea1f4ce008e2"
+    },
+    {
+      "file": "artifacts/safesight/scripts/check-network-policy.mjs",
+      "bytes": 4476,
+      "sha256": "c3ca6e2d9fae4aae16cd2c745a74abc13c233cfc9d7b41f5bb23aaabf36cf73b"
+    },
+    {
+      "file": "artifacts/safesight/scripts/evaluate-speech-context.mjs",
+      "bytes": 2551,
+      "sha256": "1b50b90e6cca740baf4d6d240e494b59f6b22da69a3ceb99cf957c48dc003cf7"
+    },
+    {
+      "file": "artifacts/safesight/scripts/hero-recording-renderer.ts",
+      "bytes": 8177,
+      "sha256": "d5df2340681d5cb9f1bcc8d0353012141b3a6862ff9beb037605c750afbd6fa1"
+    },
+    {
+      "file": "artifacts/safesight/scripts/interaction-raw-browser.ts",
+      "bytes": 1499,
+      "sha256": "211d8e888092e124bf70fba6b293133661697de78a99d4b751161f5cbd8674b4"
+    },
+    {
+      "file": "artifacts/safesight/scripts/interaction-rgb-browser.ts",
+      "bytes": 2325,
+      "sha256": "cd10af26034c3b0b2bd6cfaf8798845f9da8c528269708db17bc9360abb68587"
+    },
+    {
+      "file": "artifacts/safesight/scripts/prepare-engine-hero.mjs",
+      "bytes": 1573,
+      "sha256": "fced8a37f253b9c1e2f7c8cca432f8eef41669e8f8692cd0d245405e316c4bdf"
+    },
+    {
+      "file": "artifacts/safesight/scripts/render-devpost-cards.mjs",
+      "bytes": 5687,
+      "sha256": "1e52bae91cf147bc24ac64959f66bccfd88ad1334511feb7e96cd1613a899450"
+    },
+    {
+      "file": "artifacts/safesight/scripts/replay-browser-engine.mjs",
+      "bytes": 16381,
+      "sha256": "cc405139b84af4c06d768f6ae929d7c738a5fbd4f4bf4a5ad47536d7a3737eac"
+    },
+    {
+      "file": "artifacts/safesight/scripts/tool-detail-browser.ts",
+      "bytes": 5805,
+      "sha256": "6968bf2f9f2c3ea770fc413faafb389f6f442293075e24c3a464d767bcb8735b"
+    },
+    {
+      "file": "artifacts/safesight/src/App.tsx",
+      "bytes": 1879,
+      "sha256": "cb1b0cb67770599d4a4315b0eeef0560e136800cc7c5a1b594015de850a6cbde"
+    },
+    {
+      "file": "artifacts/safesight/src/components/calibration-panel.tsx",
+      "bytes": 14461,
+      "sha256": "b459efccf13352c1af9db52063f4ba25d5da01d88cc94faf66c50220f805b197"
+    },
+    {
+      "file": "artifacts/safesight/src/components/candidate-availability.tsx",
+      "bytes": 794,
+      "sha256": "78dbad5956fc14c7ef0ab465470e119cfdad78174b359527d5762ccff6d6c593"
+    },
+    {
+      "file": "artifacts/safesight/src/components/check-unsaved.tsx",
+      "bytes": 1025,
+      "sha256": "ad801734e8abcd9edebf4e79087fb584a2bac259104b7c3aeb8d3fd37ef8c726"
+    },
+    {
+      "file": "artifacts/safesight/src/components/clip-review/box-overlay.tsx",
+      "bytes": 3219,
+      "sha256": "7d1bf017b60b3aacef2dc7f2d0b60836c01f5f185091d39e7450ef589f1a519d"
+    },
+    {
+      "file": "artifacts/safesight/src/components/error-boundary.tsx",
+      "bytes": 2877,
+      "sha256": "dbfa95434e96b4f1152004b970b7b4a8ad763aaf96255cbb77df619400a23cc7"
+    },
+    {
+      "file": "artifacts/safesight/src/components/hero-engine.original.tsx",
+      "bytes": 4355,
+      "sha256": "6f292116c271d944a957cb850071a39d4b5ddb8fd0a7ca9513dd710770a99c73"
+    },
+    {
+      "file": "artifacts/safesight/src/components/hero-engine.tsx",
+      "bytes": 153,
+      "sha256": "dafaea8cdb0aac8f6928d591c303861e1337733729bc4336f964ab5bed6c83ff"
+    },
+    {
+      "file": "artifacts/safesight/src/components/illustrations.tsx",
+      "bytes": 10543,
+      "sha256": "c48177e4d40088b30e57ee16c15d9bfd2059a0d4c75e2d024cbe948f621e721f"
+    },
+    {
+      "file": "artifacts/safesight/src/components/monitoring-status.tsx",
+      "bytes": 1203,
+      "sha256": "be6a5fb8c72937d5ad9aac9785140d7f1e8345f4309337c4795fac899a79b87f"
+    },
+    {
+      "file": "artifacts/safesight/src/components/observation-assessment.tsx",
+      "bytes": 7530,
+      "sha256": "b6c571ece3e87219af99789865cfe6593caab7a58ca8f21eeaf59bc95419b66d"
+    },
+    {
+      "file": "artifacts/safesight/src/components/product-walkthrough.original.tsx",
+      "bytes": 7381,
+      "sha256": "7778787ea283305548a446888552a9f893bf383cd72b11c14a620c1943211029"
+    },
+    {
+      "file": "artifacts/safesight/src/components/product-walkthrough.tsx",
+      "bytes": 294,
+      "sha256": "6637b0ba6c781de6d8eb1ea937de63127a97862b6226a48ffb3c681be6cc4822"
+    },
+    {
+      "file": "artifacts/safesight/src/components/response-controls.tsx",
+      "bytes": 11136,
+      "sha256": "50f776590b63b5da0a972e62916a49f0de2166bdfde34fcf06e75d46bbc60aa8"
+    },
+    {
+      "file": "artifacts/safesight/src/components/shell.tsx",
+      "bytes": 6148,
+      "sha256": "a1fe834698e70669b8967e771ebef5b500b44a6f8d9f835718aba8baf3d0830e"
+    },
+    {
+      "file": "artifacts/safesight/src/components/speech-review.tsx",
+      "bytes": 13144,
+      "sha256": "d0956942d85f9049d402f30301b5e8200cad77ea4acae0eec850c342f5d964bd"
+    },
+    {
+      "file": "artifacts/safesight/src/components/storage-notice.tsx",
+      "bytes": 3222,
+      "sha256": "7dbd786b4a10382c197cefcfbfe2011654c19752a9fcee1809043741ce60eb38"
+    },
+    {
+      "file": "artifacts/safesight/src/components/tool-motion-panel.tsx",
+      "bytes": 7249,
+      "sha256": "db8148485d9f075c6110f65a261fdf4a50cc11625a4cdb7fb65194cc0efec60b"
+    },
+    {
+      "file": "artifacts/safesight/src/components/tracking-evidence.tsx",
+      "bytes": 2726,
+      "sha256": "5f51c871b7b7d22fafee9b910cb01c4ebb7989e742546f5589e38993f8acdecf"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/accordion.tsx",
+      "bytes": 2013,
+      "sha256": "8e4230a3e6d38bfab7b02f00f9e948c8c4038432c5b1bf2d0ea44dc8b5ce09cc"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/alert-dialog.tsx",
+      "bytes": 4447,
+      "sha256": "d76901a06e6881e94aa3847fde2602ee6f6ddc9f4cace9fa238627a5572bd24e"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/alert.tsx",
+      "bytes": 1609,
+      "sha256": "695369ea4d1ba4438dcedacaa8059b08b6463ac93170360f3bd42b983b7608e9"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/aspect-ratio.tsx",
+      "bytes": 143,
+      "sha256": "2f5b0ed3cbcf84e526caad0c6b88d4457f8745a365c86cc74d924a1b6e013a36"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/avatar.tsx",
+      "bytes": 1431,
+      "sha256": "429f5e82fc3dcf265625650176f16ff9b35e55826183e1f1b2d4dc2a338f9b15"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/badge.tsx",
+      "bytes": 1528,
+      "sha256": "ba6f51e428a520f54e600fded4ea030a8099fa6a9a7b7110af8dca34795415d1"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/breadcrumb.tsx",
+      "bytes": 2735,
+      "sha256": "44b4de47f806eec0e3de5130f0399e83700eaf0bc8deb47af5ffda2bb11eb3f1"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/button-group.tsx",
+      "bytes": 2222,
+      "sha256": "b89025c11d08652597cb46b097d3e04658ad2c383bf81ed445c8182c0ed1b260"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/button.tsx",
+      "bytes": 2370,
+      "sha256": "9c20a340ca0c948d0164158eff44fca2e26343c8ee387ffc22f9cd677c59d27d"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/calendar.tsx",
+      "bytes": 7607,
+      "sha256": "1cdd1e62797356fe62f61f5521fcf0da8e3570b1120868ccca2b48370157fe46"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/card.tsx",
+      "bytes": 1856,
+      "sha256": "9fed39a53303c12fa6ac6f5f8813c1683e2198df9ee067cffbdfe69044cf3e4f"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/carousel.tsx",
+      "bytes": 6288,
+      "sha256": "4ae2f69bc2c1ce33c60b23ddc5382f4b93882dac07c2d18cce32fb148ff52c48"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/chart.tsx",
+      "bytes": 10846,
+      "sha256": "ac747c83483d742e207426a193ba5e2cf639fa18cd819c1f12d12329520c6c12"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/checkbox.tsx",
+      "bytes": 1038,
+      "sha256": "6b9e336fa42475bbb2ad4d76478afb8d2555e6e26bac245b9ccde62a9a033adc"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/collapsible.tsx",
+      "bytes": 335,
+      "sha256": "aedcd10b62404b39d8d5544c01fee90aa7b66e7280bb80a215601ad198a1b8fd"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/command.tsx",
+      "bytes": 4918,
+      "sha256": "d8fb66e44f9f8de558f6a94c781f3d890871d76dbabcda64e6fab3c917b3237d"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/context-menu.tsx",
+      "bytes": 7446,
+      "sha256": "bdff38b45a6010e3db808c099c799bd61e6aca619378074e7b14b63c1291e4c9"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/dialog.tsx",
+      "bytes": 3889,
+      "sha256": "e0d3fa53f4cb7d8011ab09f2d198c24234062d24638fabf5142f5fbce57d2ba5"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/drawer.tsx",
+      "bytes": 3029,
+      "sha256": "152bc340ad982e84f851e3bc1a6b8e7ffd0151a7445c6ecf1b1e3e13cbc19210"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/dropdown-menu.tsx",
+      "bytes": 7646,
+      "sha256": "a79d5419ee174de35880340aef44d67847cee54846c058e02ac4a846b603c60f"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/empty.tsx",
+      "bytes": 2410,
+      "sha256": "48824b1b37bd406fa74f48db726a4f1d70cf88db5b3432f7b1d59f584f1c5dad"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/field.tsx",
+      "bytes": 6079,
+      "sha256": "c3787ffb045354e9f18e70d94890627caea94939a226e49c1e6cedee84a1e9e1"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/form.tsx",
+      "bytes": 4232,
+      "sha256": "1960463b09152760fdd99ca3eb16187408d064c7599ed66384b42d1613d3a3a3"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/hover-card.tsx",
+      "bytes": 1245,
+      "sha256": "e0b4e3f0126757a8eb5c6e436c8c041c049430abe9a2eb84b10154144b31c29c"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/input-group.tsx",
+      "bytes": 4993,
+      "sha256": "f4befbf9bf8ebd755b267c4db2b396be296adb95acca5c3fba54f6495bdedebd"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/input-otp.tsx",
+      "bytes": 2160,
+      "sha256": "b4891335e70920518cfbdef2aeb399f61477fbc4b3ffe3b8a2938f19074164cc"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/input.tsx",
+      "bytes": 775,
+      "sha256": "03ac1648171bd5ad90dbc03e9ebff9a9cc77708bcc53bdac914b80eeebfe3032"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/item.tsx",
+      "bytes": 4519,
+      "sha256": "4a84cda22d692ee176f5128517a4003a63d11f907df445e7586ef034c88e8772"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/kbd.tsx",
+      "bytes": 867,
+      "sha256": "4348a7a06a715e9e9673602cbb9ed89a6a4c6cbdd457d4c03db0f23a139d19eb"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/label.tsx",
+      "bytes": 733,
+      "sha256": "fbc0c7db4221227941271a004bf71db5067aee9d8668f3351d91113cd5934c8c"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/menubar.tsx",
+      "bytes": 8655,
+      "sha256": "26dbbf36e4ffd87aab74e61dd1e3613f0c640988479679d53bacd8dbd15cc891"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/navigation-menu.tsx",
+      "bytes": 5150,
+      "sha256": "222020e1ac703ce01700d6e8822c6263932bc71c481d724b8ef53ccaae8ad63f"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/pagination.tsx",
+      "bytes": 2772,
+      "sha256": "dd65d2e59226a3f384014b596ae701aef50f130cb3061f4657e81c588587b8da"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/popover.tsx",
+      "bytes": 1351,
+      "sha256": "dc574442536873c8aa88733c348503c4599ad6ed0fc9898fd25406d94e095cca"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/progress.tsx",
+      "bytes": 799,
+      "sha256": "74223bcccf7ca2ed026d197476abbe3d48fbc531c40f4252445f56954a270c75"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/radio-group.tsx",
+      "bytes": 1421,
+      "sha256": "8155d32dea5d4ddea2048b6d12f83fe4805d9bc87c97b994dbb0d040981334f2"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/resizable.tsx",
+      "bytes": 1733,
+      "sha256": "8e73dfb8b582944364d73b64ed03378016f20f7251f15f880dcf0fb140e1ad41"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/scroll-area.tsx",
+      "bytes": 1650,
+      "sha256": "73f5dedda781e5285092ea269f747378dbad8d95631eab638e15b3c31595dc59"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/select.tsx",
+      "bytes": 5773,
+      "sha256": "c64c9c1574c91f1eff922f3557e7609ba6c1d5e39959dbdecf8d386d7ae41990"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/separator.tsx",
+      "bytes": 764,
+      "sha256": "2b129347f918742bf006099f7f56a9be373250de2ecc3ad201297563e3d1f807"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/sheet.tsx",
+      "bytes": 4307,
+      "sha256": "ef2ae35ccab1252c4eee56e67e9f1b2499b5bbfb3ae39037d8d4be39915c272f"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/sidebar.tsx",
+      "bytes": 21969,
+      "sha256": "de7566e708ba8bf34cb4a78fc018c784315c9d7a16d70e66255f8c72caf9d1db"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/skeleton.tsx",
+      "bytes": 269,
+      "sha256": "d78130b2e311a750e7bb524e66e3af4c04e2ab02b04fd68539c1afd0bbb47152"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/slider.tsx",
+      "bytes": 1052,
+      "sha256": "3bfa7a3b92710338d9265cad322c415dbcb26d2728f6547110b4ed4e24554290"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/sonner.tsx",
+      "bytes": 902,
+      "sha256": "de5a5d9ae404545fcb0f21123530ffcf89d24a47812c70b3ca1376591e28dbdd"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/spinner.tsx",
+      "bytes": 334,
+      "sha256": "4458ea392b32f439cd4c64b9593846f339370fa1295c04f9003f05c1f3386689"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/switch.tsx",
+      "bytes": 1204,
+      "sha256": "9c39c94dd32f8919cc74db69ee27bb5bb688aaf0aeab0230ad60ba69fe56b62b"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/table.tsx",
+      "bytes": 2881,
+      "sha256": "dd29f5ef260af67ed09c84505495e3fddbad14009e3b3ce689d0c354ffaf55d3"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/tabs.tsx",
+      "bytes": 1890,
+      "sha256": "320609101fbaa6cccda0b899154cb510fa322926cfdbaf07e33b79c00c83fcd6"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/textarea.tsx",
+      "bytes": 655,
+      "sha256": "63fb699771afe60c5073ed50e1a042d7d7f21eefd12d15bcb750cf3230985011"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/toast.tsx",
+      "bytes": 4871,
+      "sha256": "04d4ef720079342e2f4380c22683f1544bd8e93a581fb55e447458f04a6127d5"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/toaster.tsx",
+      "bytes": 777,
+      "sha256": "d34c7cd51482ddd5703a13378d9ac69b3459a304581e42f56ac2c696e53163ac"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/toggle-group.tsx",
+      "bytes": 1767,
+      "sha256": "6d7aca86245edf5d0a8f6f3ed73bd19316f4865425891eabccd6f3e37e59519e"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/toggle.tsx",
+      "bytes": 1494,
+      "sha256": "5800d2099224ef90892e8c1d972d2a0964391c33cd43d7f5c6abf5cd42e023e1"
+    },
+    {
+      "file": "artifacts/safesight/src/components/ui/tooltip.tsx",
+      "bytes": 1277,
+      "sha256": "e3c6ea9d4ecd62881af33564e25be013d35a8a7fa78475a6dcc98a06c7f894eb"
+    },
+    {
+      "file": "artifacts/safesight/src/components/zone-editor.tsx",
+      "bytes": 6856,
+      "sha256": "d8ce3b690d1c44d67073e89dfd63007e4ed3483ef687a54941eb6dfaafc4cafd"
+    },
+    {
+      "file": "artifacts/safesight/src/components/zone-overlay.tsx",
+      "bytes": 3785,
+      "sha256": "8e362ba3b43ad817710d181f482feb1cff57713eecfb9b5d418c909e90fb445a"
+    },
+    {
+      "file": "artifacts/safesight/src/components/zone-review.tsx",
+      "bytes": 9808,
+      "sha256": "4f2a4dacd3b0282fe765fe226d33ee07b5618a56d47f40c8ea07b4fc662beeaa"
+    },
+    {
+      "file": "artifacts/safesight/src/components/zone-session-summary.tsx",
+      "bytes": 3176,
+      "sha256": "2c91eb5b2df4923d76a9ea4a8bc648b0f96297a6cd83f9129f93bdfd2b831151"
+    },
+    {
+      "file": "artifacts/safesight/src/components/zone-unsaved.tsx",
+      "bytes": 1228,
+      "sha256": "12fe3395b3b444ce6b2f9d2016eb865ea4aa94afc4c612e1b1bb6811e637b165"
+    },
+    {
+      "file": "artifacts/safesight/src/components/zone-workflow.tsx",
+      "bytes": 4266,
+      "sha256": "4d1f9b612e988a29cfa8837dd9ffc6419839fcdc9dfa10d7510a5e986c976b4d"
+    },
+    {
+      "file": "artifacts/safesight/src/data/calibration-public.json",
+      "bytes": 165529,
+      "sha256": "3682592abb0a4ed9dd2693b84c6d681731135f0a539e677479ca33a63643000b"
+    },
+    {
+      "file": "artifacts/safesight/src/hooks/use-calibration.ts",
+      "bytes": 12301,
+      "sha256": "998c875b08ca00d088854f70d249074c9a2f7ab5da97eabaecfbb25abf15b89d"
+    },
+    {
+      "file": "artifacts/safesight/src/hooks/use-camera.ts",
+      "bytes": 988,
+      "sha256": "a73e330042eadb62f4ea79d0dc432bf572915fc13cf5f5b4c4eafffa18a7ba97"
+    },
+    {
+      "file": "artifacts/safesight/src/hooks/use-mobile.tsx",
+      "bytes": 585,
+      "sha256": "82bff42ff087bd5dc90a5d17609cc428b8688de92d1333073a839af5ad3c9cbd"
+    },
+    {
+      "file": "artifacts/safesight/src/hooks/use-monitoring-health.ts",
+      "bytes": 2112,
+      "sha256": "9a6872d93a7f26443fc841710479f084948f2349ac3b78f8854ac4acee7151c0"
+    },
+    {
+      "file": "artifacts/safesight/src/hooks/use-responses.ts",
+      "bytes": 6125,
+      "sha256": "b02461923273fb005801aca2000347af5a7084b722cdc50b11fce0a645d2ec0b"
+    },
+    {
+      "file": "artifacts/safesight/src/hooks/use-setup-chat.ts",
+      "bytes": 5202,
+      "sha256": "7d40fa38d8f9cb52f79ffb6e3b5642fe5d9695a1ab929aa37f130d054774091f"
+    },
+    {
+      "file": "artifacts/safesight/src/hooks/use-speech-review.ts",
+      "bytes": 2125,
+      "sha256": "2d27e20a9e2bb60f3b3be62effa9537326193ddc8c5e2c5934618160ba4a05a5"
+    },
+    {
+      "file": "artifacts/safesight/src/hooks/use-toast.ts",
+      "bytes": 3952,
+      "sha256": "12cce940e597e1d597f7063131acd19658d25e924904308bf719bde17b67e351"
+    },
+    {
+      "file": "artifacts/safesight/src/hooks/use-zone-session.ts",
+      "bytes": 8732,
+      "sha256": "40863462ac0020f2f71828dbdb0d7cf5daf8cd14c048a202a69ec38215332ee4"
+    },
+    {
+      "file": "artifacts/safesight/src/index.css",
+      "bytes": 18410,
+      "sha256": "fa1d5df8fc165a1aaa1389a9801cfc5af6cd6e95d153b115c637de3fc261f32b"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/async.ts",
+      "bytes": 1441,
+      "sha256": "627f5b488649a326c3210acec4281cdb5312a1b8ff195b31fd0f775691f2c659"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/audio.ts",
+      "bytes": 1683,
+      "sha256": "40509bd096e6cf5b511cf9e05da85df337bf439b28776355e9f09641b7bb07e9"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/calibration-encoder.ts",
+      "bytes": 4087,
+      "sha256": "7b942422dae339f62fb0d61d2213ce32135c118aa21da7fb96262ee14134c38b"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/calibration-types.ts",
+      "bytes": 1187,
+      "sha256": "e6cb77de8e78ceedd6de0b7ef6a4b8eeb06af857f06d9cf8426b4c6f16df3124"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/calibration.ts",
+      "bytes": 7752,
+      "sha256": "9ecbc016d1c873b2bd15655b8ad03c02d7006f6a328f02b63c2ccffcd1dc5b37"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/calibration.worker.ts",
+      "bytes": 556,
+      "sha256": "71c10da24a10e1658e34efefed5b15473306c754028e5d9871d267b94d2bc4f6"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/camera-session.ts",
+      "bytes": 5461,
+      "sha256": "6029e55b9851fb4bf0dce79ff59ac01b4867e07a59ef559e8e85028fe114b91d"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/candidate-admission.ts",
+      "bytes": 2885,
+      "sha256": "1ad8f5bb6a61fbf342adb18a200f9588846faab509d6416bc9e56a1b3651d94a"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/check-outbox.ts",
+      "bytes": 1503,
+      "sha256": "fd92d03c4895e39ad5df7c5257575c99760fd026416e734cb78684f25bf869af"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/clip-review.ts",
+      "bytes": 11616,
+      "sha256": "056a0a3eaf46244f71c76213c3bc2392c0300f51f15e701d2261d3b2be55cb88"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/context-check-records.ts",
+      "bytes": 902,
+      "sha256": "c78ffeedca0b8973c5a2b23aba1b994126d4accc1669f55992e62b5ebb9bfeba"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/context-decision.ts",
+      "bytes": 9018,
+      "sha256": "cbcd8382324aa942388bb78ea31cc2e67ce837919178f350cff6be6e5a148665"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/context-validation.ts",
+      "bytes": 4400,
+      "sha256": "702802dc788e5a11ca6c951c4318b7c16ac58f317a3d2b71d9b4e7c49a046e1d"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/decoded-frame-probe.ts",
+      "bytes": 2534,
+      "sha256": "1f11a6971e63a7133ff1dbd1ea35fb5bd65cf2db2bf72dd765887e332cf7bbe2"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/demo-events.ts",
+      "bytes": 2792,
+      "sha256": "744dafc9e60f739e6d56dec5f299c9f6868f4dacace85626708b5cc899e6f2a9"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/detail-object-model.ts",
+      "bytes": 1939,
+      "sha256": "452153cec42fec0316842daff6f044b112aec8ab3d900139e762a774ce8e3597"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/detail-objects.ts",
+      "bytes": 2783,
+      "sha256": "7a323c5da44ba0681e0e8a8ceacd3c703d6860fb43d7604d7bb5d6bfd1d4e2db"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/frame-watchdog.ts",
+      "bytes": 618,
+      "sha256": "0f77a3fd83da6ad7f013f230903ddf4e80b9d0e0cbfd5884bcfae067b735b26a"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/interaction-features.ts",
+      "bytes": 4923,
+      "sha256": "063ab907575b39e76454c7e32bc6be151ca8b2512da4a772cce2b509387f94d8"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/interaction-pairs.ts",
+      "bytes": 7965,
+      "sha256": "6cad524b887ba7d8a185c284b45d8983e5327421077386f46e06f2af9cba3786"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/local-speech-client.ts",
+      "bytes": 2479,
+      "sha256": "1df78b6fa5eea55bdf5255edeac08f16e63c4cad77b21295b8cbf3f4bea5bc9b"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/local-speech-rules.ts",
+      "bytes": 3112,
+      "sha256": "e1677cfbae43e7022c609a71efb68921ec656c125712b203c264d660b762e36d"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/local-speech.worker.ts",
+      "bytes": 4080,
+      "sha256": "af310edc1c749ba18047435bc4cddd86a5eb0102f3eb3ad6695b8a99cd75e93d"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/monitor-entry.ts",
+      "bytes": 255,
+      "sha256": "27acdd09255c38311222938e4726ce44b4958d1c40b125fa66b8c038cf948afd"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/monitoring-health.ts",
+      "bytes": 4480,
+      "sha256": "e5d3dfd50f192659d855ddcfb7463db7b9c6dc6fd607275440eb5ec4ec8c9b54"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/monitoring-inference.ts",
+      "bytes": 590,
+      "sha256": "7e9fc0098657590f919b6cd884e065ce7917a5b7c95cfcdb8e54402b0b4d8b04"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/motion-evidence.ts",
+      "bytes": 1023,
+      "sha256": "56a091262e44b525a21b14612aee8b3651aaf1cd72ca355627beea3e0529e0b1"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/observation-presentation.ts",
+      "bytes": 9901,
+      "sha256": "a875e0bb2e27477a48558a82fae564798eb925de8dc6f1dd0e7fd08fb4689a26"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/overlay.ts",
+      "bytes": 4973,
+      "sha256": "d4600707356b152984fa3fa1090c31da7ea87e2be2af3ebe278d3502ad91678a"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/owned-frame.ts",
+      "bytes": 1147,
+      "sha256": "14fc9a5aefbf17e077e25a898771d01352c276b10e7b30fe65af757789930f49"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/person-geometry.ts",
+      "bytes": 5162,
+      "sha256": "c0afe0870937ac88c082306724ec04ff3291437973f32c6045e1b82778238927"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/person-tracking.ts",
+      "bytes": 9015,
+      "sha256": "5180ae6a82dd0fdf33a3868895dcf8e3f79d00741c28e742d3cc4ca8d69e10dd"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/pose-runtime-contract.ts",
+      "bytes": 590,
+      "sha256": "018a72ba4d298a70717af8bda6d87afc6f72232e2bac41ef1c53da64a65705d5"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/request-gate.ts",
+      "bytes": 468,
+      "sha256": "73f1f068bb2b4032b98fed03989dbf863df91c3d6e7a38fc2b712364b0e25aa9"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/response-audio.ts",
+      "bytes": 2067,
+      "sha256": "12f06ce62531a3cf0df82746b956254b6ab805502723cf8b1810528e25d3aa02"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/response-webhook-client.ts",
+      "bytes": 1110,
+      "sha256": "2aea2b6e6e6a2f9e2503646e423370a6b937645764531da8cc0f3d8512aeece4"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/response-webhook.worker.ts",
+      "bytes": 1056,
+      "sha256": "49b125f528415d39b4764a263ca2b84501e176a53a9a3f75acbe5725cb5aabd0"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/responses.ts",
+      "bytes": 4974,
+      "sha256": "d8d228542ab79cc4cb83752078af8b36c8d328f963147a60315e2b664623b4d1"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/risk.ts",
+      "bytes": 5215,
+      "sha256": "f2a8aa4d3c9172f11a0d3edbe4dc304ea866f97dfef7c3929ffb2337fa9942c5"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/scene-motion.ts",
+      "bytes": 3570,
+      "sha256": "25a818301de13a43e0aee55cbfec57de401f21dea00a48adb2dfc4d43b3d9383"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/session-clock.ts",
+      "bytes": 1017,
+      "sha256": "272f90a5cf72f6cc2ee152f26f9829c4b9709ddaf638115a0f3485330a6270a3"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/setup-changes.ts",
+      "bytes": 906,
+      "sha256": "0ab417176c0fbe3655c552065a281c9ce301fab921de57d5d7685b91b425266d"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/sharp-object-evidence.ts",
+      "bytes": 7690,
+      "sha256": "35e03214fd2c7c53a4b2a3d7fc1c3e42c2fb04df7390fdef7b821e093d32d2f0"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/speech-capture.ts",
+      "bytes": 1920,
+      "sha256": "808e11de58f59f913de64fc4f9ea1d52e937ff50ea85d8259b074a07f358073b"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/speech-context.ts",
+      "bytes": 4354,
+      "sha256": "05bc7a9a221292eaeaeb1916700cc11a1991838412c04450da97fc44bbb652f0"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/speech-session.ts",
+      "bytes": 9569,
+      "sha256": "a912a02609329275923fe29b7e1a6f04876d0dbf87c443c914ae172892911f19"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/storage-validation.ts",
+      "bytes": 6130,
+      "sha256": "7fa7a0ad96e031807fc4693a025ee7d375b677a730b244654d6d158e76c771aa"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/store.ts",
+      "bytes": 8798,
+      "sha256": "83cfb4fbc4f375488bd5df222be452fb1ce68297a08330fecc72ff40c44652cc"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/tool-motion.ts",
+      "bytes": 6475,
+      "sha256": "c47a444bfd0d52059622eb04349374f94170f26a12493efa2c83040124d4f316"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/utils.ts",
+      "bytes": 170,
+      "sha256": "afc0e1dc0e142d6b81f688d91087f81a4b2db4240cf70f55b6e5e4dcc199ebf1"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/vision-lifecycle.ts",
+      "bytes": 1738,
+      "sha256": "79d131acfc7dadc8c557e99681e4f733687fa8d9b560b94076375a57beb6ac31"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/vision-support.ts",
+      "bytes": 564,
+      "sha256": "3bb1370ab279f53ab19dadf862cc00087d1aed13ba538eeb9c8c78981946d2ac"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/vision.ts",
+      "bytes": 13005,
+      "sha256": "ce951c9506380488dae573c1df35c6ed9888113873eec397f30624d42c887bca"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/zone-demo.ts",
+      "bytes": 1296,
+      "sha256": "ccc0ff3f7101e5f3940552a724b9c406951b29b34263f063518d7f6374956b9a"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/zone-monitor.ts",
+      "bytes": 6183,
+      "sha256": "fa185dbc6009c74e69dc08cc183a9511082d785a9e5cf1facf493947d48d00cb"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/zone-outbox.ts",
+      "bytes": 1299,
+      "sha256": "c03e13ce5e8cd0ea273353e23316167ba29353a2b7c5740f343dbe1a416d6614"
+    },
+    {
+      "file": "artifacts/safesight/src/lib/zone-records.ts",
+      "bytes": 3986,
+      "sha256": "f08d256ec91a272cd2c8aa38ee4c86d7c19dc57409194debd443d615d5bae61c"
+    },
+    {
+      "file": "artifacts/safesight/src/main.tsx",
+      "bytes": 446,
+      "sha256": "e7e03b61f962dc1787ea029d4941424475455366b5a4f079c8fcb4f5df4d076c"
+    },
+    {
+      "file": "artifacts/safesight/src/pages/clip-review.tsx",
+      "bytes": 38114,
+      "sha256": "2a40515d73fe2eaf8e7a416d2dcce23c3bc1041186418a60c990e60bc4211152"
+    },
+    {
+      "file": "artifacts/safesight/src/pages/dashboard.css",
+      "bytes": 18591,
+      "sha256": "e1f2246a009e78565282315f66e5bdfb74b5a0ddbe261ef6aa3d848edf9baab9"
+    },
+    {
+      "file": "artifacts/safesight/src/pages/dashboard.tsx",
+      "bytes": 60097,
+      "sha256": "e88106ba54cceb0b57d13ca7e0a557e04dd201bed0571b91b255e264d97820d7"
+    },
+    {
+      "file": "artifacts/safesight/src/pages/docs.css",
+      "bytes": 12481,
+      "sha256": "bf1d2af14d547c44150d6edb44bd63f1d984db92953f9d13c623411d8ecf841c"
+    },
+    {
+      "file": "artifacts/safesight/src/pages/docs.tsx",
+      "bytes": 19500,
+      "sha256": "ce37ae16e0e89bbfb3d0ded58e80098c283e2cb8011c439066ee2ee1046920b6"
+    },
+    {
+      "file": "artifacts/safesight/src/pages/events.tsx",
+      "bytes": 15058,
+      "sha256": "eb777035ba68ccccef349c027a110bb6b8fac24d5b883f30a63a2cb093572883"
+    },
+    {
+      "file": "artifacts/safesight/src/pages/landing.css",
+      "bytes": 11700,
+      "sha256": "8c96b78eea7e42c3c931debe6f1ab9f86258abe635e78516f2edb0a876b601f9"
+    },
+    {
+      "file": "artifacts/safesight/src/pages/landing.tsx",
+      "bytes": 13327,
+      "sha256": "ea65d47c555be1264ad37f21dd2bbb7239724c46a4cba9443eb709bde14f6ba3"
+    },
+    {
+      "file": "artifacts/safesight/src/pages/not-found.tsx",
+      "bytes": 843,
+      "sha256": "37f44e1519f5ff51d4e93a724fe2b008973fefec9134fd564edce908429d5e8d"
+    },
+    {
+      "file": "artifacts/safesight/src/pages/settings.tsx",
+      "bytes": 9216,
+      "sha256": "2d0f9736741f4e63763cf52da9ed133354eb487148e61c7108f7a9b6fbd88f1b"
+    },
+    {
+      "file": "artifacts/safesight/tests/audio.test.mjs",
+      "bytes": 1908,
+      "sha256": "a81e70466b44ac0cc7a80be781f7fea3080d6023ece25c270b170ed98b0fcd1f"
+    },
+    {
+      "file": "artifacts/safesight/tests/benchmark-tracking.mjs",
+      "bytes": 1266,
+      "sha256": "b675e6d2a9351af59c12854f67546dd30492b792a1c343d7f7667eec81973445"
+    },
+    {
+      "file": "artifacts/safesight/tests/branding.test.mjs",
+      "bytes": 1616,
+      "sha256": "b19c865ae4e405c90035d5ce375e9d8c1fd60bd3569ee34542670fdb3b056662"
+    },
+    {
+      "file": "artifacts/safesight/tests/browser/camera-entry.spec.mjs",
+      "bytes": 3602,
+      "sha256": "0b63e97439607de8a2b40dacc7325061622f925d0450f64c93a3071d277789c1"
+    },
+    {
+      "file": "artifacts/safesight/tests/browser/docs.spec.mjs",
+      "bytes": 8000,
+      "sha256": "c289f4137089d839a7b9a5bdecd1e1aa90f3a140ae924a256ec143bf9c47b3bd"
+    },
+    {
+      "file": "artifacts/safesight/tests/browser/presentation.spec.mjs",
+      "bytes": 4117,
+      "sha256": "360c1dc7f7df72a70110932590538380f9c72a728007668242442e8b085d958d"
+    },
+    {
+      "file": "artifacts/safesight/tests/calibration-ui.test.mjs",
+      "bytes": 2363,
+      "sha256": "a43f841858d34f9424ebff5e4b4406a90fcf90d47f3af59a720c9068cfab62fa"
+    },
+    {
+      "file": "artifacts/safesight/tests/calibration.test.mjs",
+      "bytes": 4568,
+      "sha256": "f2831c3d996848aeafb5fe843f8eed16ffad389f1c9cc09bed570b119e4654f7"
+    },
+    {
+      "file": "artifacts/safesight/tests/camera.test.mjs",
+      "bytes": 6227,
+      "sha256": "e105005674782b39757769fbff35dfa16f220017db97a0241bf0db9fec4b63fe"
+    },
+    {
+      "file": "artifacts/safesight/tests/clip-review.test.mjs",
+      "bytes": 5257,
+      "sha256": "92fd266c2d709cc80da257bf3deb4013a173f46b89bd78ba8a187a036348f1c1"
+    },
+    {
+      "file": "artifacts/safesight/tests/combined-engine.test.mjs",
+      "bytes": 12215,
+      "sha256": "6e23fafdd2357c6c7f28b40a0d57eb72cdad528c79280ee05696b7835214a8ee"
+    },
+    {
+      "file": "artifacts/safesight/tests/context-decision.test.mjs",
+      "bytes": 7027,
+      "sha256": "b1e202c336be602acbbfa126b92458c3619a5f35cb471428d863eff769a6e3d1"
+    },
+    {
+      "file": "artifacts/safesight/tests/context-storage.test.mjs",
+      "bytes": 7545,
+      "sha256": "8a491df4025b89ee23964506b4b64021fee94561dc1b946ed3a692e5d503cf6b"
+    },
+    {
+      "file": "artifacts/safesight/tests/dashboard-layout.test.mjs",
+      "bytes": 3759,
+      "sha256": "ef78dda8ddb7ce60c65398aa68a4e6926c5ddc9ac0bbd3468e954efe533c480d"
+    },
+    {
+      "file": "artifacts/safesight/tests/demo-events.test.mjs",
+      "bytes": 2974,
+      "sha256": "7ea134bf961941bbbef29fe8d8f0a9b8f52f4d9e87c58151a367864a9b3b3c2a"
+    },
+    {
+      "file": "artifacts/safesight/tests/docs-popup.test.mjs",
+      "bytes": 1982,
+      "sha256": "b4147b253878aa2398267d064774854caebeb010a0e5ffd07ef4851dde5301f8"
+    },
+    {
+      "file": "artifacts/safesight/tests/fixtures/legacy-risk.mjs",
+      "bytes": 2502,
+      "sha256": "a1e732f19f3555eb410fc994b9cc35d176a3ccd4fc08721a515b23bb01dbd5d4"
+    },
+    {
+      "file": "artifacts/safesight/tests/fixtures/people.mjs",
+      "bytes": 1231,
+      "sha256": "c544b22a4a006e70529f89a02910f296ec19fcedd3881e047f10b47239a6c875"
+    },
+    {
+      "file": "artifacts/safesight/tests/hero-engine.test.mjs",
+      "bytes": 3905,
+      "sha256": "a9b092e359ae00a56467f5fb556803e65a513c23c4dffd5811f025f162c72236"
+    },
+    {
+      "file": "artifacts/safesight/tests/human-review-render.test.mjs",
+      "bytes": 3430,
+      "sha256": "c5ad807fa377cb9779352a4e161cbe21c2240c26e9f81645d999177711a569fe"
+    },
+    {
+      "file": "artifacts/safesight/tests/human-review.test.mjs",
+      "bytes": 8758,
+      "sha256": "6fc54e0adddb091c2f85af3f0437da1c1bbb76cff9dba4d20c37c99afda77305"
+    },
+    {
+      "file": "artifacts/safesight/tests/interaction-features.test.mjs",
+      "bytes": 3320,
+      "sha256": "cead90014de54c26a148fbf76833a6d7efb330e640ac3ac57d483a5c641d98eb"
+    },
+    {
+      "file": "artifacts/safesight/tests/interaction-pairs.test.mjs",
+      "bytes": 3710,
+      "sha256": "5b30b9ad96f04bd97dc3bbed0e48b792d2a4310acec3f842fefc0fe1af33b078"
+    },
+    {
+      "file": "artifacts/safesight/tests/local-speech.test.mjs",
+      "bytes": 5806,
+      "sha256": "ae6dc5bb33f3a1c90f9456ed7f9ad8420bcc39e369268c40f68c3bf5d4ef06f3"
+    },
+    {
+      "file": "artifacts/safesight/tests/monitor-entry.test.mjs",
+      "bytes": 629,
+      "sha256": "261db4d38b65ac0fb68b2fc0ea1422a5d60ee49cb8672391b232b08290ad4f42"
+    },
+    {
+      "file": "artifacts/safesight/tests/monitor-layout.test.mjs",
+      "bytes": 1977,
+      "sha256": "96e821437d3347911c4d34bcaa8584e604e4c9dd3049e4213b555d2cf7446e0f"
+    },
+    {
+      "file": "artifacts/safesight/tests/monitoring-health.test.mjs",
+      "bytes": 12557,
+      "sha256": "1d16d7fc9b644670a8a13bb23f86c30ef93a24f3551d2e575301fb56c4f477eb"
+    },
+    {
+      "file": "artifacts/safesight/tests/motion-storage.test.mjs",
+      "bytes": 2764,
+      "sha256": "a8136c12faa0c3a1d8504d67f2f8afca9770f1e54c0e3dd789640ee6a99e6c86"
+    },
+    {
+      "file": "artifacts/safesight/tests/network-policy.test.mjs",
+      "bytes": 1761,
+      "sha256": "41e2d4c17077d00402452923d4962100f2b83d30bceed88692aa1229a53fb84a"
+    },
+    {
+      "file": "artifacts/safesight/tests/observation-presentation.test.mjs",
+      "bytes": 7904,
+      "sha256": "1802f40a988edfb29ee9ac645769acfd80e5633cde11e4c29c121c6b2b6a768d"
+    },
+    {
+      "file": "artifacts/safesight/tests/observation-render.test.mjs",
+      "bytes": 5455,
+      "sha256": "26a050cde2b67eb5a1bb17ce26ea91765a1213b67151d30fbfe9bef1f7010c9b"
+    },
+    {
+      "file": "artifacts/safesight/tests/overlay-presentation.test.mjs",
+      "bytes": 1435,
+      "sha256": "e4f9f35901d85fd16745a8cb3fa2422a9d40aedfd9f87e70893fe9da382843dd"
+    },
+    {
+      "file": "artifacts/safesight/tests/responses.test.mjs",
+      "bytes": 8598,
+      "sha256": "8e0a9da5853d70cf6383d2930ed38c71bc5ea99137491c925a4cdcef58879ff8"
+    },
+    {
+      "file": "artifacts/safesight/tests/risk-tracking.test.mjs",
+      "bytes": 10615,
+      "sha256": "78209f59aad9300b009a1b1f151e2e40142e88ad405bad0468614f8c5d3fb246"
+    },
+    {
+      "file": "artifacts/safesight/tests/risk.test.mjs",
+      "bytes": 2422,
+      "sha256": "49e9ad5ba18a7cacb5d46425144810b69c2e4625b2dc70b5e07b3b9fd71f03d8"
+    },
+    {
+      "file": "artifacts/safesight/tests/scene-motion.test.mjs",
+      "bytes": 4207,
+      "sha256": "8cd90fbe45fd00b4239228025e234832fabd8dfee1ed1ea09b80e93be948ab8d"
+    },
+    {
+      "file": "artifacts/safesight/tests/session.test.mjs",
+      "bytes": 3435,
+      "sha256": "4f8118b0c710bceb4714f9a84248693a7004d6e5f16638de04c0de5945c0558a"
+    },
+    {
+      "file": "artifacts/safesight/tests/setup-changes.test.mjs",
+      "bytes": 2355,
+      "sha256": "0a13d65883e57f0b108aa16f69d17fcab2423584853b6415b8afb15c244ff2ba"
+    },
+    {
+      "file": "artifacts/safesight/tests/sharp-object-evidence.test.mjs",
+      "bytes": 7814,
+      "sha256": "b57ffe054d0e22ba171819f3201222dbfa29fa413a0b0cd5cab0cef76dbd6938"
+    },
+    {
+      "file": "artifacts/safesight/tests/sharp-object-replay-bridge.mjs",
+      "bytes": 3321,
+      "sha256": "61f1e9792857eaa98292c370567a467b7c19291fff56d05d7aef5f9ab93a44e0"
+    },
+    {
+      "file": "artifacts/safesight/tests/shell-status.test.mjs",
+      "bytes": 834,
+      "sha256": "8eb50e4927067f330a5cece54c0b65a01a359bb3f0e9fb235ed381aa33a8759c"
+    },
+    {
+      "file": "artifacts/safesight/tests/speech.test.mjs",
+      "bytes": 8328,
+      "sha256": "3e821bca139dcf84e62fb8bbb769fc363518a05ba623e06dcd9549b8d34bd383"
+    },
+    {
+      "file": "artifacts/safesight/tests/store.test.mjs",
+      "bytes": 4076,
+      "sha256": "152c3a0f4b543f6c6a31c9926958e0f6bc68ea24f4646fd186a57ee7eeacb7e5"
+    },
+    {
+      "file": "artifacts/safesight/tests/tool-motion.test.mjs",
+      "bytes": 4876,
+      "sha256": "3484065ced0eb57d3deca4e111cef6ca7bd4a0ce5a5fb25fdd05187ccdc5b149"
+    },
+    {
+      "file": "artifacts/safesight/tests/tracking-evidence-replay.test.mjs",
+      "bytes": 3959,
+      "sha256": "6ba514cb3f1a0fafe92f1e725186346e0f233224c34403873f39e7c84ec9b3f2"
+    },
+    {
+      "file": "artifacts/safesight/tests/tracking-replay-bridge.mjs",
+      "bytes": 3184,
+      "sha256": "5e27ad8f97e51fa3c3ce04ab8df5af127dcf616669d2694aaa15398cddc507f2"
+    },
+    {
+      "file": "artifacts/safesight/tests/vision-lifecycle.test.mjs",
+      "bytes": 5511,
+      "sha256": "0153bc0a674c15dd456db62e86db61c20e2d3f99b3c4254e812fa2d3d89b4239"
+    },
+    {
+      "file": "artifacts/safesight/tests/zone-monitor.test.mjs",
+      "bytes": 9259,
+      "sha256": "1cbd38c6f033e5a778c269618ede2c18d1fa6689c927eada516e2aa4438a14c1"
+    },
+    {
+      "file": "artifacts/safesight/tests/zone-storage.test.mjs",
+      "bytes": 8060,
+      "sha256": "c0a68acf8fdb8bac34861d663d3e433470b09dccee944d257f2e01ea4016837d"
+    },
+    {
+      "file": "artifacts/safesight/tsconfig.json",
+      "bytes": 520,
+      "sha256": "e0a2fd8a7f3bfc860ccab5623b1881e754eb02336612708ff8b59215e8c256c9"
+    },
+    {
+      "file": "artifacts/safesight/vite.config.ts",
+      "bytes": 1803,
+      "sha256": "4f7c94d802c4f2d5f5c92e051ac99f5701d62d518a8cb412b9ae094879e0a4f7"
+    },
+    {
+      "file": "lib/api-client-react/package.json",
+      "bytes": 265,
+      "sha256": "ae70f97a12d1f7e7cbb291b5ffd1d6893f0d7a0ff7721a21e615d47bccfad789"
+    },
+    {
+      "file": "lib/api-client-react/src/custom-fetch.ts",
+      "bytes": 11377,
+      "sha256": "3a5605ea89571cca7ea9412a230a40954e3a3f1d94d7a566271480165bf5e03c"
+    },
+    {
+      "file": "lib/api-client-react/src/generated/api.schemas.ts",
+      "bytes": 3809,
+      "sha256": "32d156e4d3c604aaea418b0a8390acb608c3d2d23d7d0b11a87a937b5594b387"
+    },
+    {
+      "file": "lib/api-client-react/src/generated/api.ts",
+      "bytes": 18961,
+      "sha256": "baf22a7a410d59f942767ba0593b175ea22239f39be76a0bf06d3b156922da48"
+    },
+    {
+      "file": "lib/api-client-react/src/index.ts",
+      "bytes": 194,
+      "sha256": "7974b36e3973a8d0c403589bcf8d8aca7547c5c42c4b73924d05f49de18809e5"
+    },
+    {
+      "file": "lib/api-client-react/tsconfig.json",
+      "bytes": 267,
+      "sha256": "a00fda842228e3478705abcf2c76d9641f5d6263cd5d2df0b613d5379088ad73"
+    },
+    {
+      "file": "lib/api-spec/openapi.yaml",
+      "bytes": 8295,
+      "sha256": "a8438a3ac21e55b331f199c14bc0cf4c18ac89c6303fec597a4fdd039b221ab3"
+    },
+    {
+      "file": "lib/api-spec/orval.config.ts",
+      "bytes": 2082,
+      "sha256": "c8c5abc36e3fcdd8963de8473007ff6d08027788ec780ced570a1e579df25539"
+    },
+    {
+      "file": "lib/api-spec/package.json",
+      "bytes": 228,
+      "sha256": "15dacbf426eae69915fc57094cbd0345a198aa0f305eb0ff33915ac17de04dd0"
+    },
+    {
+      "file": "lib/api-zod/package.json",
+      "bytes": 189,
+      "sha256": "07009861b2ba8decccb4e9d78d743cb7273bd91915231b5eb1463b296efca13e"
+    },
+    {
+      "file": "lib/api-zod/src/generated/api.ts",
+      "bytes": 5925,
+      "sha256": "b54bb037b845627f2e7703a4f3349732717375aff8956244ad68d58744b56e00"
+    },
+    {
+      "file": "lib/api-zod/src/generated/types/healthStatus.ts",
+      "bytes": 172,
+      "sha256": "cbf343355d947ee2a2fc7c6ff659866f5620a9fd2f1c84de981041f5b4aefc87"
+    },
+    {
+      "file": "lib/api-zod/src/generated/types/index.ts",
+      "bytes": 733,
+      "sha256": "ed693da19bb84d15e84f8ca281294a5fcaff86260caf900b426f84f8233da97f"
+    },
+    {
+      "file": "lib/api-zod/src/generated/types/sceneAssessment.ts",
+      "bytes": 345,
+      "sha256": "4113672a9419f00ec14794197afe6e57d0909e6cd04b1beed55887913a932021"
+    },
+    {
+      "file": "lib/api-zod/src/generated/types/sceneAssessmentRisk.ts",
+      "bytes": 347,
+      "sha256": "bd842910f6bf164ad6e34db671f0bed14d2ee1c070e0fe3b7680551e91a532f2"
+    },
+    {
+      "file": "lib/api-zod/src/generated/types/sceneInput.ts",
+      "bytes": 313,
+      "sha256": "89b1ef0aeee4decf187ea965ade1dc225952958108277c6bf30ac383eaa77adb"
+    },
+    {
+      "file": "lib/api-zod/src/generated/types/setupAnswer.ts",
+      "bytes": 383,
+      "sha256": "1ccab25ef42eca04da5af8fc496b62b9d5b8df2c07d3dba4a4923fb67e8efc6c"
+    },
+    {
+      "file": "lib/api-zod/src/generated/types/setupInput.ts",
+      "bytes": 357,
+      "sha256": "cfb343f0c67a2a62af953791be3748cf81964da788b9348c449248474d35a36b"
+    },
+    {
+      "file": "lib/api-zod/src/generated/types/setupMessage.ts",
+      "bytes": 316,
+      "sha256": "54f436c34eb4a49f6709a89e984a8fa65e75d93b02411fef0ff07d713c9f15c0"
+    },
+    {
+      "file": "lib/api-zod/src/generated/types/setupMessageRole.ts",
+      "bytes": 297,
+      "sha256": "7ffd297115dcc046cd4a7301e9340957e02b07297dc466c4f77ab823a7f1049c"
+    },
+    {
+      "file": "lib/api-zod/src/generated/types/setupPatch.ts",
+      "bytes": 676,
+      "sha256": "286e9facaa07d5b0da285f46727d5edd5f531d77122cb68472228e6d49c698e1"
+    },
+    {
+      "file": "lib/api-zod/src/generated/types/setupPatchFacingMode.ts",
+      "bytes": 317,
+      "sha256": "7f15b4aad871c82b9e1bc62eb3dc2497a7e1a2c272d3993135ac4857da01f9d6"
+    },
+    {
+      "file": "lib/api-zod/src/generated/types/setupPatchLogThreshold.ts",
+      "bytes": 333,
+      "sha256": "59de33ac19391d763d0da2fae62310c20feb30a659fcdbf59b93c22768ae6c9a"
+    },
+    {
+      "file": "lib/api-zod/src/generated/types/setupProposal.ts",
+      "bytes": 301,
+      "sha256": "98a82e30708d2f45bd14c84d9cdd163dbadc176da1023f72c06bb58ca4a3b47f"
+    },
+    {
+      "file": "lib/api-zod/src/generated/types/speechCategory.ts",
+      "bytes": 379,
+      "sha256": "7de49534e96dd9c1263d11e2780f45a801d9afb8ec3dca18340119bb4a69adaf"
+    },
+    {
+      "file": "lib/api-zod/src/generated/types/speechCue.ts",
+      "bytes": 389,
+      "sha256": "fbfd2eba6161f356340a0a9f23244bc0fad2820f9b06dd4ecbf341714890a44a"
+    },
+    {
+      "file": "lib/api-zod/src/generated/types/speechInput.ts",
+      "bytes": 487,
+      "sha256": "2f74240c05084ace604c1c1bed5e42833c49d01ab8ab1099369b78a58981b1da"
+    },
+    {
+      "file": "lib/api-zod/src/generated/types/speechInputMimeType.ts",
+      "bytes": 295,
+      "sha256": "1b37350b45467ec58879bdbc4a26a0427cf4d6b5c3e323b4379055a204cb6c0a"
+    },
+    {
+      "file": "lib/api-zod/src/generated/types/speechReview.ts",
+      "bytes": 462,
+      "sha256": "c22f05c685e4e2193f409d0c47942a6c89360043cc144da403db1c80219223f7"
+    },
+    {
+      "file": "lib/api-zod/src/generated/types/speechReviewStatus.ts",
+      "bytes": 419,
+      "sha256": "354b2ec0ef1d68c3be10a8caea9c52a66ecb454171cf42965d3e1762eb5146a7"
+    },
+    {
+      "file": "lib/api-zod/src/index.ts",
+      "bytes": 68,
+      "sha256": "effb7d33b5df99004c9b1a840944516ca3ad65cbcd3ae2fcc717c505814ce039"
+    },
+    {
+      "file": "lib/api-zod/tsconfig.json",
+      "bytes": 221,
+      "sha256": "bb52c0e8b13e658570a208d946cb874fdf2b8d990f7c228f96fb24254c9c5a95"
+    },
+    {
+      "file": "lib/db/drizzle.config.ts",
+      "bytes": 352,
+      "sha256": "57862221556f24a1accd28b283876930c403ad7c86b79d87cfb5c9c200ba6258"
+    },
+    {
+      "file": "lib/db/package.json",
+      "bytes": 578,
+      "sha256": "b3a3034936a6c5251cf1d8d9bdbde1471580db520456dd2af27a8f42208fd2c5"
+    },
+    {
+      "file": "lib/db/src/index.ts",
+      "bytes": 416,
+      "sha256": "fc285bc83108137ba57c4c2774a35053e3c25fda1292c3d7a16a57d43dd9679c"
+    },
+    {
+      "file": "lib/db/src/schema/index.ts",
+      "bytes": 743,
+      "sha256": "459c09e0be1c1e28c794ee70e838f55d0c3d225fa6614fe2d4182a86fbf5e115"
+    },
+    {
+      "file": "lib/db/tsconfig.json",
+      "bytes": 244,
+      "sha256": "69c976d11de35f0ac391934625beeccdd1b2689ba5d0f14c54b5384d4c30a9c9"
+    },
+    {
+      "file": "lib/safesight-guide/package.json",
+      "bytes": 144,
+      "sha256": "a47007106fcfa9cbb3f863ac7f8f0b06e1cbc629260e0d84234a9f0918f8bf87"
+    },
+    {
+      "file": "lib/safesight-guide/src/index.ts",
+      "bytes": 24196,
+      "sha256": "94a2b1c1f7b56053f46d473e19a7b49df210df7b8730b89b21c4c7462c1b17eb"
+    },
+    {
+      "file": "lib/safesight-guide/tsconfig.json",
+      "bytes": 221,
+      "sha256": "bb52c0e8b13e658570a208d946cb874fdf2b8d990f7c228f96fb24254c9c5a95"
+    },
+    {
+      "file": "package.json",
+      "bytes": 702,
+      "sha256": "8063953b11fbc8a60c950c2ca1bc544d290ef66d9f47311aa40ffe06ae2737cc"
+    },
+    {
+      "file": "pnpm-lock.yaml",
+      "bytes": 247143,
+      "sha256": "759441ce45532b7e4b851622abb3f59796648888918d71b09339b6ba5b9a2446"
+    },
+    {
+      "file": "pnpm-workspace.yaml",
+      "bytes": 4676,
+      "sha256": "add08a83875c296f97cfd145ce3714c30359fc0592f63987d988ad26a60bb2e8"
+    },
+    {
+      "file": "scripts/local-preview.mjs",
+      "bytes": 2398,
+      "sha256": "6a8dbc53022ae3b4027078d166fa78ec1dd26a0e63bd57358f05fdc8b165c0dc"
+    },
+    {
+      "file": "tsconfig.base.json",
+      "bytes": 692,
+      "sha256": "2dfaa6f6168f618e0e6deff048c17e4f5f73d59325bd935d471905ae6773585c"
+    },
+    {
+      "file": "tsconfig.json",
+      "bytes": 277,
+      "sha256": "fb4234a3a436d0114eabf30e365dd51d2f44085dc2fa7182505b403c0ca6adc3"
+    }
+  ]
+}
